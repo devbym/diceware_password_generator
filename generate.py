@@ -14,7 +14,7 @@ def gen_round(turns=5):
     return round_result
 
 def wordpicker():
-    w = open(r'diceware/diceware_list.txt',  'r')
+    w = open(r'diceware_list.txt',  'r')
     number = gen_round()
     for line in w.readlines():
         if number in line:
@@ -24,13 +24,13 @@ def wordpicker():
     w.close()
 
 def appender(li):
-    op = open(r'diceware/generated.txt', 'a')
+    op = open(r'generated.txt', 'a')
     for word in li:
         op.write(word)
     op.close()
 
 def writer(li):
-    op = open(r'diceware/generated.txt', "x")
+    op = open(r'generated.txt', "x")
     for word in li:
         op.write(word)
     op.close()
@@ -48,4 +48,4 @@ def main():
 
 
 if __name__ == '__main__':
-        main()
+    main()
